@@ -6,7 +6,7 @@ A React-based habit tracker application that allows users to track their habits,
 ## Live Demo
 
 Check out the live version of the application here:  
-👉 [Todo Application Live Demo](https://cozy-froyo-25d34d.netlify.app/)
+👉 [Todo Application Live Demo](https://habit-tracker-redux.netlify.app/)
 
 ---
 ---
