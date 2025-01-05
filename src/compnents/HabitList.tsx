@@ -1,7 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../store/store.ts";
 import {Box, Button, Grid, LinearProgress, Paper, Typography} from "@mui/material";
-import {Check,  Delete} from "@mui/icons-material";
+import {Delete} from "@mui/icons-material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import {Habit, removeHabit, toggleHabit} from "../store/habit-slice.ts";
 
 const HabitList = () => {
@@ -43,7 +44,7 @@ const HabitList = () => {
                                 <Box sx={{display: "flex", justifyContent: "flex-end", gap:1}}>
                                     <Button variant="outlined"
                                             color={habit.completedDates.includes(today)? "success": "primary"}
-                                            startIcon={<Check Circle />}
+                                            startIcon={<CheckCircleIcon />}
                                             onClick={() => {
                                                 dispatch(toggleHabit({habitId: habit.id, date: today}));
                                             }}>

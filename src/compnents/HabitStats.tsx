@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import {AppDispatch, RootState} from "../store/store.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchHabits, Habit} from "../store/habit-slice.ts";
