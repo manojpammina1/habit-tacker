@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Habit Tracker Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based habit tracker application that allows users to track their habits, view statistics, and manage daily streaks. This application leverages Redux for state management and Material-UI for UI components.
+---
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version of the application here:  
+👉 [Todo Application Live Demo](https://cozy-froyo-25d34d.netlify.app/)
 
-## Expanding the ESLint configuration
+---
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Track Habits**: Add, update, and remove habits.
+- **Daily Completion**: Mark habits as completed for the current day.
+- **Streak Management**: Calculate current and longest streaks for each habit.
+- **Statistics Dashboard**: View aggregated statistics like total habits, habits completed today, and the longest streak.
+- **Responsive Design**: Built with Material-UI for a responsive and clean user interface.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend**: React, TypeScript, Material-UI
+- **State Management**: Redux with Redux Toolkit
+- **API**: Mocked using JSONPlaceholder or Redux Toolkit actions.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Project Structure
+
+```plaintext
+src/
+├── components/
+│   ├── AddHabitForm.tsx  # Add form for Habits
+│   ├── HabitStats.tsx    # Dashboard for habit statistics
+│   ├── HabitList.tsx     # List view for habits
+├── store/
+│   ├── store.ts          # Redux store configuration
+│   ├── habit-slice.ts    # Habit slice with actions and reducers
+├── utils/
+│   ├── habitUtils.ts     # Utility functions like getStreak
+├── App.tsx               # Main application component
+└── index.tsx             # Application entry point
